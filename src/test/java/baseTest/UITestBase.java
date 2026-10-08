@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.microsoft.playwright.*;
 
+import config.EnvironmentConfig;
 import pages.*;
 import utils.ConfigReader;
 
@@ -84,9 +85,10 @@ public class UITestBase extends BaseTests {
 
         page.setDefaultTimeout(timeout);
 
-        page.navigate(
-                ConfigReader.getProperty("baseUrl")
-        );
+//        page.navigate(
+//                ConfigReader.getProperty("baseUrl")
+//        );
+        page.navigate(EnvironmentConfig.getUrl());
 
         loginPage = new LoginPage(page);
         homePage = new HomePage(page);
