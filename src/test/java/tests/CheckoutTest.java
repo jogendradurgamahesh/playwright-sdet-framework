@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 import utils.ConfigReader;
 import utils.JsonReader;
 
-import baseTest.BaseTest;
+import baseTest.UITestBase;
 
-public class CheckoutTest extends BaseTest {
+public class CheckoutTest extends UITestBase {
 
 	@Test
 	public void completeOrder() {
@@ -33,7 +33,7 @@ public class CheckoutTest extends BaseTest {
 		productsPage.openCart();	
 
 		//validate cart
-		Assert.assertTrue(cartPage.isProductAvailable("Sauce Labs Bolt T-Shirt"));
+		Assert.assertTrue(cartPage.isProductAvailable(productName));
 
 		//click checkout
 		cartPage.clickCheckOut();

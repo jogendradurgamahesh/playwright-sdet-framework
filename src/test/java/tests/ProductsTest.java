@@ -3,9 +3,9 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseTest.BaseTest;
+import baseTest.UITestBase;
 
-public class ProductsTest extends BaseTest{
+public class ProductsTest extends UITestBase{
 
 	@Test
 	public void addProdctsToCart() {

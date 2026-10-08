@@ -6,9 +6,10 @@ import org.testng.annotations.Test;
 import com.microsoft.playwright.APIResponse;
 
 import api.ApiClient;
-import baseTest.BaseTest;
+import baseTest.APITestBase;
 
-public class ApiTests extends BaseTest{
+
+public class ApiTests extends APITestBase{
 
 	@Test
 	public void getUsersTest() {

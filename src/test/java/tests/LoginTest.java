@@ -6,22 +6,18 @@
 
 package tests;
 
-import java.nio.file.Paths;
-
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 
-import baseTest.BaseTest;
+import baseTest.UITestBase;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
 @Feature("Login")
-public class LoginTest extends BaseTest {
+public class LoginTest extends UITestBase {
 	
 	//public static void main(String[] args) {
 		

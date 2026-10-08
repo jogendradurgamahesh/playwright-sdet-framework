@@ -8,11 +8,11 @@ import com.microsoft.playwright.options.RequestOptions;
 
 public class ApiClient {
 	
-	private Playwright playwright;
+	//private Playwright playwright;
 	private APIRequestContext request;
 	
 	public ApiClient(Playwright playwright) {
-		this.playwright=playwright;
+		//this.playwright=playwright;
 		request=playwright.request().newContext(new APIRequest.NewContextOptions().setBaseURL("https://reqres.in"));
 		
 	}

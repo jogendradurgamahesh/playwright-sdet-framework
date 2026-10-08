@@ -50,8 +50,11 @@ public class BaseTest {
 		//      homePage = new HomePage(page);
 
 		playwright=Playwright.create();
-		String browserName=ConfigReader.getProperty("browser");
-		boolean headless=Boolean.parseBoolean(ConfigReader.getProperty("headless"));
+//		String browserName=ConfigReader.getProperty("browser");
+//		boolean headless=Boolean.parseBoolean(ConfigReader.getProperty("headless"));
+		
+		String browserName=ConfigReader.getBrowser();
+		boolean headless=ConfigReader.isHeadless();
 
 		if(browserName.equalsIgnoreCase("chromium")) {
 			browser=playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(headless));
