@@ -1,0 +1,12 @@
+target/
+screenshots/
+traces/
+videos/
+allure-results/
+allure-report/
+test-output/
+
+.idea/
+*.iml
+
+*.log
