@@ -26,10 +26,19 @@ public class CartPage {
 	public int getItemCount() {
 		return cartItem.count();
 	}
-	public boolean isProductAvailable(String pName) {
-		return page.locator(".cart_item").filter(new Locator.FilterOptions().setHasText(pName)).isVisible();
-	}
+//	public boolean isProductAvailable(String pName) {
+//		return page.locator(".cart_item").filter(new Locator.FilterOptions().setHasText(pName)).isVisible();
+//	}
+//	
 	
+
+public boolean isProductAvailable(String pName) {
+    Locator product = page.locator(".cart_item")
+            .filter(new Locator.FilterOptions().setHasText(pName));
+
+    return product.count() > 0;
+}
+
 	public void clickCheckOut() {
 		checkoutButton.click();
 	}
